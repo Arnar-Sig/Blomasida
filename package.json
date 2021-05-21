@@ -1,0 +1,25 @@
+{
+  "name": "vefsida",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "sass": "node-sass styles.scss styles.css",
+    "sass-watch": "node-sass --source-map-embed --watch *.scss --recursive styles.css",
+    "dev": "concurrently npm:sass-watch npm:browser-sync start --server --files index.html styles.css",
+    "sass-nomap": "node-sass styles.scss styles.css",
+    "lint": "stylelint styles.scss ./**/*.scss"
+  },
+  "author": "Arnar",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "browserify": "^17.0.0",
+    "concurrently": "^6.1.0",
+    "lightbox": "^0.5.0",
+    "php": "^1.0.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
