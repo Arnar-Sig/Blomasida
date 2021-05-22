@@ -1,3 +1,4 @@
+//Loads all images after page load
 var folder = "img/";
 $.ajax({
     url : folder,
@@ -8,7 +9,7 @@ $.ajax({
                 <div class="col col-3 col-md-5 col-sm-10 offset-col-md-1 offset-col-sm-1">
                     <section class="flower">
                     <a href="${folder + val}" data-lightbox="mygallery" data-title="blóm">
-                        <div class="image"><img src="${folder + val}" alt=""></div
+                        <div class="image"><img src="${folder + val}" alt=""><span class="tooltiptext">Tooltip text</span></div
                         ></a>
                     </section>
                 </div>
