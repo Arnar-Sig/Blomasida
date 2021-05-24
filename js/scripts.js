@@ -6,11 +6,17 @@ $.ajax({
         $(data).find("a").attr("href", function (i, val) {
             if( val.match(/\.(jpe?g|png|gif|JPG)$/) ) { 
                 let mynd = `
-                <div class="col col-3 col-md-5 col-sm-10 offset-col-md-1 offset-col-sm-1">
+                <div class="col col-3">
                     <section class="flower">
-                    <a href="${folder + val}" data-lightbox="mygallery" data-title="blóm">
-                        <div class="image"><img src="${folder + val}" alt=""><span class="tooltiptext">Tooltip text</span></div
-                        ></a>
+                        <a href="${folder + val}" data-lightbox="mygallery" data-title="blóm">
+                            <div class="image"><img src="${folder + val}" alt="">
+                            <span class="tooltiptext">Tooltip text</span>
+                            
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloremque incidunt 
+                        blanditiis accusantium qui recusandae nulla cumque temporibus dolores provident 
+                        impedit exercitationem voluptatem numquam, delectus illum, at corporis dignissimos natus.</p>
                     </section>
                 </div>
                 `
@@ -20,3 +26,4 @@ $.ajax({
         });
     }
 });
+
