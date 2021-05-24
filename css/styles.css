@@ -95,6 +95,10 @@ main {
  
 }
 
+.prufa{
+  margin-right:75%;
+  display:flex;
+}
 .gallery{
   display:flex;
   flex-wrap:wrap;
