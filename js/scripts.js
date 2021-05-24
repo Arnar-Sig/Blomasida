@@ -1,5 +1,6 @@
 //Loads all images after page load
-var folder = "img/";
+let folder = "img/";
+let imgNumber = 0;
 $.ajax({
     url : folder,
     success: function (data) {
@@ -9,9 +10,8 @@ $.ajax({
                 <div class="col col-3">
                     <section class="flower">
                         <a href="${folder + val}" data-lightbox="mygallery" data-title="blóm">
-                            <div class="image"><img src="${folder + val}" alt="">
-                            <span class="tooltiptext">Tooltip text</span>
-                            
+                            <div class="image"><img src="${folder + val}" id="${folder + val}" alt="">
+                            <span class="tooltiptext">Tooltip text.</span>
                             </div>
                         </a>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloremque incidunt 
@@ -21,9 +21,29 @@ $.ajax({
                 </div>
                 `
                 $(galleri).append(mynd);
-                console.log("success");
+
+                /*
+                let tempMynd = document.getElementById(folder+val);
+                let comment = getExif(tempMynd);
+                console.log(tempMynd);
+                console.log(comment);
+                */
             } 
         });
     }
 });
 
+/*
+//Get EXIF-data
+"use strict";
+function getExif(picture) {
+    EXIF.getData(picture, function(){
+        let imgComment = EXIF.getTag(this, "Make");
+        console.log("exif.gettag: " + imgComment);
+
+
+        let test = JSON.stringify(imgComment);
+        console.log("stringify prufa: " + test);
+    });
+}
+*/
