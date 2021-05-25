@@ -6,7 +6,6 @@ $.ajax({
     success: function (data) {
         $(data).find("a").attr("href", function (i, val) {
             if( val.match(/\.(jpe?g|png|gif|JPG)$/) ) { 
-   
             } 
         });
     }
@@ -18,7 +17,7 @@ $.ajax({
         $(data).find("a").attr("href", function (i, val) {
             if( val.match(/\.(jpe?g|png|gif|JPG)$/) ) { 
                 let mynd = `
-                <div class="col col-4">
+                <div class="col col-3">
                     <section class="flower">
                         <a href="${folder + val}" data-lightbox="mygallery" data-title="blóm">
                             <div class="image"><img src="${folder + val}" id="${folder + val}" alt="">
