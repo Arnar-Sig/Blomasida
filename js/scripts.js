@@ -1,6 +1,7 @@
 //Loads all images after page load
 let folder = "img/";
-
+let imagesArray = []; 
+/*
 $.ajax({
     url : folder,
     success: function (data) {
@@ -10,12 +11,14 @@ $.ajax({
         });
     }
 });
+*/
 
 $.ajax({
     url : folder,
     success: function (data) {
         $(data).find("a").attr("href", function (i, val) {
             if( val.match(/\.(jpe?g|png|gif|JPG)$/) ) { 
+                imagesArray.push(folder+val);
                 let mynd = `
                 <div class="col col-3">
                     <section class="flower">
@@ -57,3 +60,21 @@ function getExif(picture) {
     });
 }
 */
+
+
+/* let xhr = new XMLHttpRequest();
+xhr.open('GET', 'img/', true);
+request.responseType = 'blob';
+xhr.onload = function(){
+    console.log('loaded!');
+}
+xhr.send();
+
+ */
+
+/* $.get('./', function(myndirJSON){
+    let listiAfMyndum = JSON.parse(myndirJSON);
+    console.log(listiAfMyndum);
+});
+ */
+console.log(imagesArray);

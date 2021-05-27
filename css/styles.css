@@ -25,6 +25,7 @@ a {
 h1, h2, h3, h4 {
   font-family: 'Montaga', Georgia, serif;
   color:#222222;
+ 
 }
 
 header .content {
@@ -36,6 +37,7 @@ header .content {
 header h1 {
   font-size: 6vmax;
   margin-bottom:2rem;
+  min-width:700px;
 }
 
 header h2 {
