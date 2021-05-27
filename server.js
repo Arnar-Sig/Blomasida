@@ -30,6 +30,9 @@ http.createServer(function (request, response) {
         case '.wav':
             contentType = 'audio/wav';
             break;
+        case '.txt':
+            contentType = 'text/plain';
+            break;
     }
 
     fs.readFile(filePath, function(error, content) {
@@ -54,7 +57,9 @@ http.createServer(function (request, response) {
 
 }).listen(3000);
 console.log('Server running at http://127.0.0.1:3000/');
-
+//
+// main server endar
+//
 
 const img = './img';
 let myndir;
@@ -65,19 +70,20 @@ fs.readdir(img, (err, files) => {
     else{
         myndir = files;
         console.log(myndir)
-        buatilJSON();
+        listOfPics();
     }
 });
 
-/* function listOfPics(){
+function listOfPics(){
     fs.writeFile('./img/listOfPics.txt', myndir.toString(), () => {
         console.log('file written');
     });
-} */
+}  
 
-function buatilJSON(){
+/* function buatilJSON(){
     let myndirJSON = JSON.stringify(myndir);
 fs.writeFile('./myndirJSON.json', myndirJSON, () => {
     console.log('json file buinn til');
 });
-}
+} */
+
