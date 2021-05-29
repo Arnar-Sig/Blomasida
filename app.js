@@ -17,6 +17,15 @@ app.listen(port, hostname, () => {
   console.info(`Server running at http://${hostname}:${port}/`);
 });
 
+
+
+import fs from 'fs';
+
+let rawData = fs.readFileSync('pictureData.json');
+let imageData = JSON.parse(rawData);
+
 app.use('/', (req, res) => {
-    res.render('../index');
+    res.render('../index', {imageData});
 });
+
+

@@ -2,6 +2,7 @@
 let folder = "img/";
 let imagesArray = []; 
 
+
 /* $.ajax({
     url : folder,
     success: function (data) {
@@ -28,7 +29,9 @@ let imagesArray = [];
     }
 }); */
 
-let xhr = new XMLHttpRequest();
+
+
+/* let xhr = new XMLHttpRequest();
 xhr.open('GET', 'img/listOfPics.txt', true);
 xhr.responseType = 'text/plain';
 xhr.onload = function(){
@@ -55,9 +58,9 @@ xhr.onload = function(){
         
         $(galleri).append(mynd);
     }
-    
 }
-xhr.send();
+xhr.send(); */
+
 
 
 
