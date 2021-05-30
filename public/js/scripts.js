@@ -1,4 +1,5 @@
 //Loads all images after page load
+
 let folder = "img/";
 let imagesArray = []; 
 
